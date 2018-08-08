@@ -1,7 +1,7 @@
 def search_runnerup(list):
-    a = 0
-    b = 0
-    c =0
+    a = -100
+    b = -100
+    c = -100
     for x in list:
         if x>a :
             if b>c:
@@ -18,7 +18,8 @@ def search_runnerup(list):
     return b;
 
 if __name__ == '__main__':
-    n = int(input())
-    arr = list(map(int, input().rstrip().split()))
-    runup = search_runnerup(arr)
-    print(runup)
+	n = int(input())
+	if n>=2 or n<=10:
+		arr = list(map(int, input().rstrip().split()))
+		runup = search_runnerup(arr)
+		print(runup)
